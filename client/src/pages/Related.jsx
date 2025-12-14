@@ -17,7 +17,7 @@ function Related() {
     setMovies([]);
 
     try {
-      const response = await fetch('https://jain-mayukh-movieback.hf.space', {
+      const response = await fetch('https://jain-mayukh-movieback.hf.space/similar', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: input })

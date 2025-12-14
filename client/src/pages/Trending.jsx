@@ -8,7 +8,10 @@ function Trending() {
   useEffect(() => {
     const fetchTrending = async () => {
       try {
-        const response = await fetch('https://jain-mayukh-movieback.hf.space');
+        const response = await fetch('https://jain-mayukh-movieback.hf.space/trending', {
+          method: 'GET',
+          headers: { 'Content-Type': 'application/json' }
+        });
         const data = await response.json();
         setMovies(data.results);
       } catch (error) {

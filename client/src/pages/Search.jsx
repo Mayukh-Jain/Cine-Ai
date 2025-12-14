@@ -19,7 +19,7 @@ function Search() {
     setMovies([])
 
     try {
-      const response = await fetch('https://jain-mayukh-movieback.hf.space', {
+      const response = await fetch('https://jain-mayukh-movieback.hf.space/recommend', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: query, limit: 10 }) 
